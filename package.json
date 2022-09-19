@@ -1,0 +1,27 @@
+{
+  "name": "privatefileshare",
+  "version": "0.0.1",
+  "description": "Simple file share application with encryption support",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env PORT=80 node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgeboyo/PrivateFileShare.git"
+  },
+  "author": "edgeboyo",
+  "license": "SEE LICENCE IN LICENCE",
+  "bugs": {
+    "url": "https://github.com/edgeboyo/PrivateFileShare/issues"
+  },
+  "homepage": "https://github.com/edgeboyo/PrivateFileShare#readme",
+  "dependencies": {
+    "@fastify/static": "^5.0.0",
+    "fastify": "^4.6.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
