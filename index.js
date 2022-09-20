@@ -4,7 +4,7 @@ console.log("Starting Application...");
 
 const fastify = setUpFastify();
 
-console.log("Starting listener...");
+console.log(`Starting listener on port ${process.env.PORT}...`);
 
 fastify.listen(
   (process.env.PORT,

@@ -5,10 +5,10 @@ function createFastify() {
     logger: false,
   });
 
-  // fastify.register(require("@fastify/static"), {
-  //   root: path.join(__dirname, "public"),
-  //   prefix: "/", // optional: default '/'
-  // });
+  fastify.register(require("@fastify/static"), {
+    root: path.join(__dirname, "public"),
+    prefix: "/", // optional: default '/'
+  });
 
   return fastify;
 }
