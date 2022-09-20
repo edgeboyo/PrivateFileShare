@@ -2,11 +2,11 @@ const path = require("path");
 
 function createFastify() {
   const fastify = require("fastify")({
-    logger: false,
+    logger: true,
   });
 
   fastify.register(require("@fastify/static"), {
-    root: path.join(__dirname, "public"),
+    root: path.join(path.dirname(require.main.filename), "public"),
     prefix: "/", // optional: default '/'
   });
 
@@ -16,7 +16,7 @@ function createFastify() {
 function createRoutings(fastify) {
   // Root directory - upload site
   fastify.get("/", async (request, reply) => {
-    reply.view("Hello!");
+    reply.send({ hello: "world" });
   });
 }
 
