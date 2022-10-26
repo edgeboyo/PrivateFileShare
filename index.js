@@ -6,6 +6,11 @@ const fastify = setUpFastify();
 
 console.log(`Starting listener on port ${process.env.PORT}...`);
 
+if (process.env.DRY_RUN === "TRUE") {
+  console.warn("Dry run completed. Exiting application...");
+  process.exit(0);
+}
+
 fastify.listen({ port: process.env.PORT }, function (err, address) {
   if (err) {
     fastify.log.error(err);
