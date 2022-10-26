@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env PORT=8080 node index.js",
+    "dev": "nodemon --watch . --exec \"npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +20,8 @@
   "homepage": "https://github.com/edgeboyo/PrivateFileShare#readme",
   "dependencies": {
     "@fastify/static": "^6.0.0",
-    "fastify": "^4.6.0"
+    "fastify": "^4.6.0",
+    "nodemon": "^2.0.20"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
